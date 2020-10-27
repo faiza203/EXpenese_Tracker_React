@@ -1,9 +1,10 @@
 import { IncomeExpenses } from "./IncomeExpenses";
 import { TransactionList } from "./TransactionList"
 import { AddNewTransaction } from "./AddNewTransaction";
+import { Balance } from "./Balance"
 export const Container = () => {
-    return <div id="container">  <h4>Your Balance</h4>
-        <h1 id="balance">$0.00</h1>
+    return <div id="container">
+        <Balance />
         <IncomeExpenses />
         <TransactionList />
         <AddNewTransaction />
