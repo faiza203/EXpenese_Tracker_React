@@ -1,12 +1,15 @@
 import { Header } from "./Components/Header";
 import { Container } from "./Components/Container";
-import "./App.css"
+import "./App.css";
+import { GlobalProvider } from "./Context/globalState"
 function App() {
   return (
-    <div>
-      <Header />
-      <Container />
-    </div>
+    <GlobalProvider>
+      <div>
+        <Header />
+        <Container />
+      </div>
+    </GlobalProvider>
   );
 }
 
