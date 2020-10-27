@@ -1,4 +1,5 @@
 import React, { createContext, useReducer } from "react";
+import appReducer from "./AppReducer";
 const initialState = {
     transactions: [
         { id: 1, amount: "200", text: "flower" },
