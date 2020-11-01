@@ -1,14 +1,15 @@
-import { Header } from "./Components/Header";
-import { Container } from "./Components/Container";
-import "./App.css";
-import { GlobalProvider } from "./Context/globalState"
+import React from 'react';
+import {Header} from './components/Header';
+import {Container, container} from './components/Container';
+import { GlobalProvider } from './context/GlobalState';
+
+import './App.css';
+
 function App() {
   return (
     <GlobalProvider>
-      <div>
-        <Header />
-        <Container />
-      </div>
+    <Header />
+    <Container />
     </GlobalProvider>
   );
 }
