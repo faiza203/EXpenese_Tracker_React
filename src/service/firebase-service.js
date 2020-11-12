@@ -11,7 +11,7 @@ const firebaseConfig = {
     measurementId: "G-VWTHY9S6DH"
   };
   firebase.initializeApp(firebaseConfig);
-  firebase.messaging();
+  const messaging =  firebase.messaging();
 export function configureNotification() {
     Notification.requestPermission().then((permission) => {
        if(permission === "granted"){
