@@ -1,6 +1,5 @@
 import firebase from "firebase";
-
-const firebaseConfig = {
+const firebaseConfig = { 
     apiKey: "AIzaSyAZX5VgMVNTyz-J_UUoCFuXIFK48pk7mzU",
     authDomain: "common-50c43.firebaseapp.com",
     databaseURL: "https://common-50c43.firebaseio.com",
@@ -11,13 +10,15 @@ const firebaseConfig = {
     measurementId: "G-VWTHY9S6DH"
   };
   firebase.initializeApp(firebaseConfig);
-  const messaging =  firebase.messaging();
-export function configureNotification() {
+  const messaging = firebase.messaging();
+  export function initNotification() {
     Notification.requestPermission().then((permission) => {
+        console.log(permission);
        if(permission === "granted"){
-        messaging.getToken({ vapidKey: '<YOUR_PUBLIC_VAPID_KEY_HERE>' }).then((currentToken) => {
+        messaging.getToken({ vapidKey: 'BHm336ISof5XjwAPbzhRLgD6fLooyIrQ-QepeG2BB6o4gG9U-l4_f7dsGQgJ6MH0BGe9iSqZARQWyWtzCw_yujQ' }).then((currentToken) => {
             if (currentToken) {
-                 console.log("TOKEN =>" , currentToken);
+                 console.log("TOKEN =>");
+                 console.log(currentToken);
             } else {
                 console.log('No registration token available. Request permission to generate one.');
             }

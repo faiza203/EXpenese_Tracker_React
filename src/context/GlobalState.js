@@ -22,10 +22,14 @@ export const GlobalProvider = ({ children }) => {
   }
 
   function addTransaction(transaction) {
+    if(transaction.amount === 0){
+      alert("Please add a value")
+    }else{
     dispatch({
       type: 'ADD_TRANSACTION',
       payload: transaction
     });
+  }
   }
 
   return (<GlobalContext.Provider value={{

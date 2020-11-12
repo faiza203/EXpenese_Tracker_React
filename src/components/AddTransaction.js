@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState';
-
+import {initNotification} from './../service/firebase-service'
 export const AddTransaction = () => {
   const [text, setText] = useState('');
   const [amount, setAmount] = useState(0);
@@ -34,7 +34,7 @@ export const AddTransaction = () => {
           >
           <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
         </div>
-        <button className="btn">Add transaction</button>
+        <button onClick={initNotification} className="btn">Add transaction</button>
       </form>
     </>
   )

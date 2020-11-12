@@ -1,5 +1,5 @@
 importScripts("https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js")
-importScripts("https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js")
+importScripts("https://www.gstatic.com/firebasejs/8.0.1/firebase-messaging.js")
 const firebaseConfig = {
   apiKey: "AIzaSyAZX5VgMVNTyz-J_UUoCFuXIFK48pk7mzU",
   authDomain: "common-50c43.firebaseapp.com",
